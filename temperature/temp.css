@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body{
+    height:100vh;
+    width: 100%;
+    background-image: url("img.jpg");
+    background-size: cover;
+    background-position: center;
+} */
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* min-width: 100%; 
+    min-height: 100%; */
+  }
+  @media (min-aspect-ratio:16/9){
+    #myVideo{
+        width: 100%;
+        height: auto;
+    }
+  }
+  @media (mix-aspect-ratio:16/9){
+    #myVideo{
+        width: auto;
+        height: 100%;
+    }
+  }
+.container{
+    /* position: fixed;
+  bottom: 0; */
+  /* background: rgba(0, 0, 0, 0.5); */
+    /* margin: 80px; */
+    padding: 185px 300px 300px 300px;
+    align-items: center;
+}
+h1{
+    margin-bottom: 20px;
+    padding-left: 65px;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+.tem{
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    /* margin: -10px; */
+}
+.tem input{
+    font-size: 13px;
+    padding: 6px;
+    background: none;
+}
+.btn{
+    margin: 20px;
+    margin-left: 100px;
+    /* padding: 10px; */
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: 2px solid  rgb(0, 0, 0);
+    color:  rgb(0, 0, 0);
+    width: 50%;
+    border-radius: 8px;
+}
+#result{
+    padding-left: 70px;
+    font:30px sans-serif;
+    font-weight: bold;
+}

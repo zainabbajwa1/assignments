@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        .con {
+            text-align: center;
+            padding-top: 20px;
+            background-color: whitesmoke;
+        }
+
+        .con label {
+            font-size: 20px;
+        }
+
+        .btn {
+            margin: 20px;
+            /* margin-left: 100px; */
+            /* padding: 10px; */
+            font-size: 28px;
+            font-weight: bold;
+            background: none;
+            border: 2px solid rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            width: 30%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="con">
+        <h1>TABLE</h1>
+        <form action="" onsubmit="table(); return false">
+            <label for="prnttable">Enter a Number for table:</label>
+            <input type="number" name="input" id="prnttable" placeholder="Enter a number"><br>
+            <button class="btn" type="submit">CHECK</button>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+</body>
+<script>
+    function table() {
+        let a = document.querySelector("#prnttable").value;
+        document.querySelector("#result").innerHTML = ""
+        for (let i = 0; i < 10; i++) {
+            document.querySelector("#result")
+                .innerHTML += ` ${a} x ${i + 1} = ${a * (i + 1)}<br>`;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <link rel="stylesheet" href="temp.css">
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay muted loop id="myVideo">
+            <source src="te.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        <h1>TEMPERATURE</h1>
+        <form action="" onsubmit="form(); return false;">
+            <div class="tem">
+            <label for="temp">Enter Your Temperature:</label>
+            <input type="Number" id="temp" value="" placeholder="Enter your temperature">
+        </div>
+            <button class="btn">Check</button>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+
+
+    <script>
+        function form() {
+            let tem = document.querySelector("#temp").value;
+            if (tem > 50) {
+                document.querySelector("#result").innerHTML = `Weather is so Hot..`;
+            }
+            else if (tem > 40) {
+                document.querySelector("#result").innerHTML = `Weather is Hot..`;
+            }
+            else if (tem > 30) {
+                document.querySelector("#result").innerHTML = `Weather is Normal..`;
+            }
+            else if (tem > 20) {
+                document.querySelector("#result").innerHTML = `Weather is Cool..`;
+            }
+            else if (tem > 10) {
+                document.querySelector("#result").innerHTML = `Weather is so Cool..`;
+            }
+            else {
+                document.querySelector("#result").innerHTML = `Weather is freezing Cold..`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

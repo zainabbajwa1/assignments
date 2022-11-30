@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even and Odd</title>
+    <style>
+        .con {
+            margin: 100px 0px 100px 0px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom:20px ;
+            background-color: rgb(225, 214, 214);
+        }
+
+        .con label {
+            font-size: 20px;
+        }
+
+        .btn {
+            margin: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            background: none;
+            border: 2px solid rgba(55, 50, 50, 0.806);
+            color: rgba(0, 0, 0, 0.806);
+            width: 30%;
+            border-radius: 8px;
+        }
+
+        #result {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <h1><u>Even & Odd Number</u></h1>
+        <form onsubmit="calculate(); return false;">
+            <label for="number">Enter a number:</label>
+            <input type="number" min="1" required id="number" placeholder="Enter a number">
+            <br>
+            <button class="btn" type="submit">Check</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script>
+
+        function calculate() {
+
+            let num = document.querySelector("#number").value;
+
+            num = Number(num)
+
+            result = num % 2;
+
+            let resultLine =
+                `Your result: <b> ${result} </b>
+                <br>
+                (if result shows zero it means your entered number was even, otherwise it was odd)`;
+
+            document.querySelector("#result").innerHTML = resultLine;
+        }
+    </script>
+</body>
+
+</html>

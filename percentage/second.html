@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>percentage finder</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+
+<body>
+    <div class="cont">
+        <h1 class="heading">Find Your Percentage</h1>
+        <form onsubmit="form(); return false">
+            <div class="obtain">
+                <label for="num">Enter Your obtain Marks:</label>
+                <input type="number" name="" id="num" placeholder="Enter obtain marks">
+            </div>
+            <div class="total">
+                <label for="num1">Enter Total Marks:</label>
+                <input type="number" name="" id="num1" placeholder="Enter total marks">
+            </div>
+            <button class="btn">Calculate</button>
+        </form>
+        <h1 id="result1"></h1>
+    </div>
+    <script>
+        // percentage calculate
+        function form() {
+            let obtainmarks = document.querySelector("#num").value;
+            let totalmarks = document.querySelector("#num1").value;
+            let result = (obtainmarks / totalmarks) * 100;
+            document.querySelector("#result1").innerHTML = `Your percentage is ${result} %`;
+        }
+    </script>
+</body>
+
+</html>
